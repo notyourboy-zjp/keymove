@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			#earth{
+				position:absolute;
+				left:0px;
+				top:0px;
+			}
+		</style>
+	</head>
+	<body>
+	<img src="img/1.png" id="earth">
+	</body>
+	<script>
+	var x=0;
+	var y=0;
+	var oEarth=document.getElementById("earth");
+		document.onkeydown=function(e){
+			console.log(e.keyCode);
+			if(e.keyCode==40){
+				y=y+10;
+			}
+			if(e.keyCode==38){
+				y=y-10;
+			}
+			if(e.keyCode==37){
+				x=x-10;
+			}
+			if(e.keyCode==39){
+				x=x+10;
+			}
+			oEarth.style.top=y+"px";
+			oEarth.style.left=x+"px";
+		}
+	</script>
+</html>
